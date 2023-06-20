@@ -30,6 +30,7 @@
           <li
             v-for="(todo, i) in todos"
             :class="{'list-group-item d-flex align-item-center justify-content-between': true, 'text-decoration-line-through': todo.done}"
+            @click="toggledone"
           >
             {{todo.text}}
             <button

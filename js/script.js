@@ -45,6 +45,11 @@ const app = createApp({
       this.todos.push({ done: false, text: this.newTodo });
       this.newTodo = "";
     },
+    toggledone(currentIndex) {
+      this.todos.forEach((todo, index) => {
+        if (todos.done[index] === currentIndex) todo.done = !todo.done;
+      });
+    },
   },
 });
 app.mount("#root");
