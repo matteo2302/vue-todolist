@@ -29,7 +29,7 @@
         <ul class="list-group">
           <li
             v-for="(todo, i) in todos"
-            :class="{'list-group-item d-flex align-item-center justify-content-between', text-decoration-line-through : !todo.done}"
+            :class="{'list-group-item d-flex align-item-center justify-content-between': true, 'text-decoration-line-through': todo.done}"
           >
             {{todo.text}}
             <button

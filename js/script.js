@@ -3,6 +3,10 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
+      newTodo: {
+        text: "",
+        done: false,
+      },
       todos: [
         {
           text: "osservare le frogghe",
@@ -33,7 +37,9 @@ const app = createApp({
   },
   methods: {
     removeFromLi(currentIndex) {
-      this.todos.filter(i);
+      this.todos = this.todos.filter((todo) => {
+        return todo[currentIndex];
+      });
     },
   },
 });
