@@ -39,14 +39,20 @@
             ></button>
           </li>
         </ul>
-
-        <div class="input-group mb-3">
+        <div class="input-group mt-3">
           <input
             type="text"
             class="form-control"
             placeholder="cosa devo fare ancora?"
+            v-model="newTodo.text"
           />
-          <span class="input-group-text">aggiungi</span>
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            @click="addTodo"
+          >
+            aggiungi
+          </button>
         </div>
       </div>
     </div>

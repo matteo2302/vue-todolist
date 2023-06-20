@@ -5,7 +5,6 @@ const app = createApp({
     return {
       newTodo: {
         text: "",
-        done: false,
       },
       todos: [
         {
@@ -39,9 +38,11 @@ const app = createApp({
     removeFromLi(currentIndex) {
       this.todos = this.todos.filter((todo, index) => {
         console.log("ok");
-        index !== currentIndex;
-        return;
+        return index !== currentIndex;
       });
+    },
+    addTodo() {
+      this.todos.push({ done: false, text: this.newTodo });
     },
   },
 });
