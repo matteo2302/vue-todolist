@@ -21,5 +21,21 @@
     <script defer src="js/script.js"></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div class="container mt-5">
+        <h1 class="mb-5">cosa devo fare oggi?</h1>
+
+        <ul class="list-group">
+          <li
+            v-for="(todo, i) in todos"
+            :class="{'list-group-item d-flex align-item-center justify-content-between', text-decoration-line-through : !done}"
+          >
+            {{todo.text}}
+            <button type="button" class="btn-close"></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
