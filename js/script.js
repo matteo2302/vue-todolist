@@ -10,7 +10,7 @@ const app = createApp({
       todos: [
         {
           text: "osservare le frogghe",
-          done: false,
+          done: true,
         },
         {
           text: "saltare 3 volte",
@@ -37,8 +37,10 @@ const app = createApp({
   },
   methods: {
     removeFromLi(currentIndex) {
-      this.todos = this.todos.filter((todo) => {
-        return todo[currentIndex];
+      this.todos = this.todos.filter((todo, index) => {
+        console.log("ok");
+        index !== currentIndex;
+        return;
       });
     },
   },
