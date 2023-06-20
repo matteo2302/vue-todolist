@@ -31,5 +31,10 @@ const app = createApp({
       ],
     };
   },
+  methods: {
+    removeFromLi(currentIndex) {
+      this.todos.filter(i);
+    },
+  },
 });
 app.mount("#root");
