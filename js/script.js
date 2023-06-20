@@ -43,6 +43,7 @@ const app = createApp({
     },
     addTodo() {
       this.todos.push({ done: false, text: this.newTodo });
+      this.newTodo = "";
     },
   },
 });
