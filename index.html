@@ -45,6 +45,7 @@
             class="form-control"
             placeholder="cosa devo fare ancora?"
             v-model="newTodo"
+            @keyup.enter="addTodo"
           />
           <button
             class="btn btn-outline-success"
